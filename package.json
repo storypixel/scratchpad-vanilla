@@ -9,6 +9,9 @@
     "vinyl-source-stream": "*",
     "lodash": "*",
     "gulp-sass": "*",
-    "browser-sync": "*"
+    "browser-sync": "*",
+    "gulp-util": "*",
+    "gulp-imagemin": "*",
+    "gulp-newer": "*"
   }
 }

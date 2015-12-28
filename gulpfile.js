@@ -82,10 +82,19 @@ gulp.task('styles', function () {
 .woff2
 .woff
  * */
+// gulp.task('copyfiles', function() {
+//   //gulp.src('./src#<{(||)}>#*.{ttf,woff,woff2,eof,svg,jpg,jpeg,png,gif}')
+//     gulp.src('./src#<{(||)}>#*')
+//     .pipe(gulp.dest('./build'));
+// });
+
 gulp.task('copyfiles', function() {
-  //gulp.src('./src/**/*.{ttf,woff,woff2,eof,svg,jpg,jpeg,png,gif}')
-    gulp.src('./src/**/*')
-    .pipe(gulp.dest('./build'));
+    var imgSrc = 'src/**/*',
+        imgDst = 'build';
+
+
+    return gulp.src(imgSrc)
+        .pipe(gulp.dest(imgDst));
 });
 
 // WEB SERVER
@@ -98,7 +107,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('default', ['styles', 'watch'], function () {
-  gulp.watch("./src/**/*", ['copyfiles']);
-  gulp.watch("./src/scss/**/*.scss", ['styles']);
-  gulp.watch("./*.html", ['html']);
+  gulp.watch("src/**/*", ['copyfiles']);
+  gulp.watch("src/scss/**/*.scss", ['styles']);
+  gulp.watch("*.html", ['html']);
 });

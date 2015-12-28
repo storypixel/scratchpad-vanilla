@@ -9,11 +9,6 @@ var _ = require('lodash');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var sass        = require('gulp-sass');
-var gutil = require('gulp-util');
-var notify = require('gulp-notify');
-var newer = require('gulp-newer');
-var imagemin = require('gulp-imagemin');
-var del = require('del');
 
 var config = {
   entryFile: './src/javascript/index.js',
@@ -67,32 +62,30 @@ gulp.task('watch', ['build-persistent'], function() {
 
 // html stuff
 gulp.task('html', function() {
-  return gulp.src('*.html')
+  return gulp.src('./*.html')
   .pipe(reload({stream:true})); // inject into browsers
 });
 
 // Sass task, will run when any SCSS files change.
 gulp.task('styles', function () {
-  return gulp.src('src/scss/style.scss')
+  return gulp.src('./src/scss/style.scss')
   .pipe(sass({includePaths: ['scss']})) // compile sass
   .pipe(gulp.dest(config.outputDir + "stylesheets")) // write to css dir
   .pipe(reload({stream:true})); // inject into browsers
 });
 
-// Fonts and such
+/*
+.eot
+.otf
+.svg
+.ttf
+.woff2
+.woff
+ * */
 gulp.task('copyfiles', function() {
-    gulp.src('src/**/*.{ttf,woff,woff2,eof,svg,jpg,jpeg,png,gif}')
-    .on('end', function(){ gutil.log('copying there...'); })
-    .pipe(gulp.dest('build'))
-    .on('end', function(){ gutil.log('put in build...'); });
-});
-
-// Images
-gulp.task('images', function() {
-  return gulp.src('src/images/**')
-  .pipe(newer('build/images'))
-  .pipe(imagemin())
-  .pipe(gulp.dest('build/images'));
+  //gulp.src('./src/**/*.{ttf,woff,woff2,eof,svg,jpg,jpeg,png,gif}')
+    gulp.src('./src/**/*')
+    .pipe(gulp.dest('./build'));
 });
 
 // WEB SERVER
@@ -104,9 +97,8 @@ gulp.task('serve', function () {
   });
 });
 
-gulp.task('default', ['styles', 'images', 'watch'], function () {
-  gulp.watch("src/**/*.{ttf,woff,woff2,eof}", ['copyfiles']);
-  gulp.watch("src/images/**", ['images']);
-  gulp.watch("src/scss/**/*.scss", ['styles']);
-  gulp.watch("*.html", ['html']);
+gulp.task('default', ['styles', 'watch'], function () {
+  gulp.watch("./src/**/*", ['copyfiles']);
+  gulp.watch("./src/scss/**/*.scss", ['styles']);
+  gulp.watch("./*.html", ['html']);
 });

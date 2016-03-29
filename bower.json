@@ -1,0 +1,26 @@
+{
+  "name": "scratchpad-vanilla",
+  "description": "a starting point",
+  "main": "index.html",
+  "authors": [
+    "Sam Wilson <sam@radius.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/storypixel/scratchpad-vanilla",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "gsap": "^1.18.2"
+  },
+  "dependencies": {
+    "normalize-css": "^4.0.0",
+    "reset-css": "^2.0.2011012603",
+    "jquery": "^2.2.2"
+  }
+}

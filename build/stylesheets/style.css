@@ -1,4 +1,30 @@
-#hi {
-  top: 25%;
-  left: 25%;
-  position: absolute; }
+.block {
+  background-color: black;
+  border-radius: 10%;
+  color: white;
+  text-align: center;
+  height: 25px;
+  padding: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  width: 25px; }
+
+#block1 {
+  background-color: pink;
+  left: 5%;
+  top: 5vw; }
+
+#block2 {
+  background-color: cornflowerblue;
+  right: 5%;
+  top: 5%; }
+
+#block3 {
+  background-color: fuchsia;
+  left: 5vw;
+  bottom: 5%; }
+
+#block4 {
+  background-color: yellow;
+  right: 5%;
+  bottom: 5%; }

@@ -21,5 +21,48 @@ var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CS
 // //then later, control the whole thing...
 // tl.play();
 
-var element = $('#hi');
-TweenLite.to(hi, 1, {opacity: .25, scale: 3});
+var randomNum = Math.floor((Math.random() * 1000) + 1);
+var tl = new TimelineMax({repeat:2, repeatDelay:1});
+
+var block1 = $('#block1');
+var block2 = $('#block2');
+var block3 = $('#block3');
+var block4 = $('#block4');
+
+
+tl.add(
+TweenLite.to(block1, 2, {
+  x: 900,
+  y: 900,
+  ease: Power1.easeInOut,
+  // opacity: .5,
+  })
+);
+
+tl.add(
+TweenLite.to(block2, 2, {
+  x: -900,
+  y: 900,
+  ease: Power1.easeInOut,
+  // opacity: .25,
+  })
+);
+
+tl.add(
+TweenLite.to(block3, 3, {
+  x: 500,
+  y: -900,
+  ease: Power1.easeInOut,
+  // opacity: .25,
+  })
+);
+
+tl.add(
+TweenLite.to(block4, 4, {
+  y: -900,
+  ease: Power2.easeInOut,
+  // opacity: .25,
+  })
+);
+
+  tl.play();

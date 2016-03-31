@@ -6,6 +6,8 @@ var TimelineLite = require('../../bower_components/gsap/src/uncompressed/Timelin
 var TimelineMax = require('../../bower_components/gsap/src/uncompressed/TimelineMax.js');
 var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CSSPlugin.js');
 
+var CSSPlugin = require('https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ColorPropsPlugin.min.js');
+//
 // Animating code
 // see http://greensock.com/forums/topic/8370-gsap-demos-snippets-pens/
 // see https://greensock.com/jump-start-js#basic-tween
@@ -21,48 +23,52 @@ var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CS
 // //then later, control the whole thing...
 // tl.play();
 
-var randomNum = Math.floor((Math.random() * 1000) + 1);
-var tl = new TimelineMax({repeat:2, repeatDelay:1});
+var tl = new TimelineMax({
+  repeat:-1,
+  repeatDelay: .5,
+  yoyo: true
+});
 
-var block1 = $('#block1');
-var block2 = $('#block2');
-var block3 = $('#block3');
-var block4 = $('#block4');
+var block1 = $('#wave-1');
+var block2 = $('#wave-2');
+var block3 = $('#inner');
+var block4 = $('#circles');
 
 
 tl.add(
-TweenLite.to(block1, 2, {
-  x: 900,
-  y: 900,
-  ease: Power1.easeInOut,
-  // opacity: .5,
+  TweenLite.to(block1, 2, {
+    transformOrigin: "50% 50%",
+rotation: 360,
+    ease: Bounce.easeInOut,
+    opacity: .5,
+    })
+);
+
+tl.add(
+  TweenLite.to(block2, 2, {
+    transformOrigin: "50% 50%",
+    rotation: -360,
+    ease: Elastic.easeInOut,
+    opacity: .25,
   })
 );
 
 tl.add(
-TweenLite.to(block2, 2, {
-  x: -900,
-  y: 900,
-  ease: Power1.easeInOut,
-  // opacity: .25,
+  TweenLite.to(block3, 3, {
+    transformOrigin: "50% 50%",
+    scale: -100,
+    ease: Power1.easeInOut,
+    opacity: .25,
   })
 );
 
 tl.add(
-TweenLite.to(block3, 3, {
-  x: 500,
-  y: -900,
-  ease: Power1.easeInOut,
-  // opacity: .25,
+  TweenLite.to(block4, 4, {
+    rotation: 360,
+    transformOrigin: "50% 50%",
+    ease: Power2.easeInOut,
+    opacity: .1
   })
 );
 
-tl.add(
-TweenLite.to(block4, 4, {
-  y: -900,
-  ease: Power2.easeInOut,
-  // opacity: .25,
-  })
-);
-
-  tl.play();
+tl.play();

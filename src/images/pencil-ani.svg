@@ -1,0 +1,22 @@
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+<defs>
+</defs>
+<path id="follower" fill="none" stroke="none" stroke-width="3" d="M52.3,32.7H31.5l-3.8,5.7l-4-5.7H3c-1.7,0-3-1.4-3-3V3c0-1.6,1.4-3,3-3h49.3
+	c1.6,0,3,1.4,3,3v26.7C55.3,31.3,54,32.7,52.3,32.7z"/>
+<path id="circ" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M300,220c44.2,0,80,35.8,80,80s-35.8,80-80,80s-80-35.8-80-80S255.8,220,300,220"/>
+<path id="straight" fill="none" stroke="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M49,300h502"/>
+<path id="straightProgress" fill="none" stroke="#3BCE76" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M49,300h502"/>
+<path id="halfway" fill="none" stroke="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M117,220c117,160,268,160,347,0"/>
+<path id="arrow" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M332.5,309.3L300,341.7l-32.5-32.5 M300,258.3v83"/>
+<path id="pencil" fill="none" stroke="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M308,321.3l-8,20.5l-8-20.5 M308,238.3v83h-16v-83H308z"/>
+<path id="tick" fill="none" stroke="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M264.1,311.3l34,28.2L344,272"/>
+</svg>

@@ -28,10 +28,13 @@ var tubeLine = $('#tt-1-line');
 var tubeLine2 = $('#tt-2-line');
 var tubeLine3 = $('#tt-3-line');
 
+
 tt3.mouseenter( function() {
          console.log('click on icon worked');
          TweenLite.to(tubeLine, 2,{
            y: -50,
+           // transformOrigin:"left top",
+           // scaleY:30,
            ease: Back.easeOut.config(1.7)});
 
            TweenLite.to(tubeLine2, 2, {
@@ -50,20 +53,20 @@ tt3.mouseenter( function() {
 tt3.mouseleave( function() {
   console.log('click on icon worked');
   TweenLite.to(tubeLine, 2,{
-    y: -25,
+    scaleY: 0,
     ease: Back.easeOut.config(1.7)});
 
-           TweenLite.to(tubeLine2, 2, {
-             y: -5,
-             ease: Back.easeOut.config(1),
-             // opacity: .5,
-           });
+    TweenLite.to(tubeLine2, 2, {
+      y: -5,
+      ease: Back.easeOut.config(1),
+      // opacity: .5,
+    });
 
-           TweenLite.to(tubeLine3, 1, {
-             y: -5,
-             ease: Back.easeOut.config(2),
-             // opacity: .5,
-           });
+    TweenLite.to(tubeLine3, 1, {
+      y: -5,
+      ease: Back.easeOut.config(2),
+      // opacity: .5,
+    });
 });
 
 

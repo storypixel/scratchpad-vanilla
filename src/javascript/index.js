@@ -20,49 +20,54 @@ var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CS
 //
 // //then later, control the whole thing...
 // tl.play();
+var tl = new TimelineMax({repeat: -1, yoyo:true, repeatDelay:1});
 
-var randomNum = Math.floor((Math.random() * 1000) + 1);
-var tl = new TimelineMax({repeat:2, repeatDelay:1});
+// var tt3 = $('tt-1-body');
+var tt3 = $('.ico-1');
+var tubeLine = $('#tt-1-line');
+var tubeLine2 = $('#tt-2-line');
+var tubeLine3 = $('#tt-3-line');
 
-var block1 = $('#block1');
-var block2 = $('#block2');
-var block3 = $('#block3');
-var block4 = $('#block4');
+tt3.mouseenter( function() {
+         console.log('click on icon worked');
+         TweenLite.to(tubeLine, 2,{
+           y: -50,
+           ease: Back.easeOut.config(1.7)});
+
+           TweenLite.to(tubeLine2, 2, {
+             y: -20,
+             ease: Back.easeOut.config(1),
+             // opacity: .5,
+           });
+
+           TweenLite.to(tubeLine3, 1, {
+             y: 25,
+             ease: Back.easeOut.config(2),
+             // opacity: .5,
+           });
+});
+
+tt3.mouseleave( function() {
+  console.log('click on icon worked');
+  TweenLite.to(tubeLine, 2,{
+    y: -25,
+    ease: Back.easeOut.config(1.7)});
+
+           TweenLite.to(tubeLine2, 2, {
+             y: -5,
+             ease: Back.easeOut.config(1),
+             // opacity: .5,
+           });
+
+           TweenLite.to(tubeLine3, 1, {
+             y: -5,
+             ease: Back.easeOut.config(2),
+             // opacity: .5,
+           });
+});
 
 
-tl.add(
-TweenLite.to(block1, 2, {
-  x: 900,
-  y: 900,
-  ease: Power1.easeInOut,
-  // opacity: .5,
-  })
-);
 
-tl.add(
-TweenLite.to(block2, 2, {
-  x: -900,
-  y: 900,
-  ease: Power1.easeInOut,
-  // opacity: .25,
-  })
-);
-
-tl.add(
-TweenLite.to(block3, 3, {
-  x: 500,
-  y: -900,
-  ease: Power1.easeInOut,
-  // opacity: .25,
-  })
-);
-
-tl.add(
-TweenLite.to(block4, 4, {
-  y: -900,
-  ease: Power2.easeInOut,
-  // opacity: .25,
-  })
-);
-
-  tl.play();
+// tl.add(
+// );
+// tl.play();

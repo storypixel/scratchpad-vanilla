@@ -3,6 +3,22 @@
 // @import "base/reset";
 
 // Your styles
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 50vw;
+}
+
+// .ico-1 {
+//   background-color: red;
+// }
+
+svg {
+  height: 500px;
+  width: 500px;
+}
+
 .block {
   background-color: black;
   border-radius: 10%;

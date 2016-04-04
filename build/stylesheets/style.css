@@ -1,3 +1,13 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 50vw; }
+
+svg {
+  height: 500px;
+  width: 500px; }
+
 .block {
   background-color: black;
   border-radius: 10%;

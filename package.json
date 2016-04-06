@@ -13,5 +13,8 @@
     "gulp-util": "*",
     "gulp-imagemin": "*",
     "gulp-newer": "*"
+  },
+  "dependencies": {
+    "lodash": "^4.8.2"
   }
 }

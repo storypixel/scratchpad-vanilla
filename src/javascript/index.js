@@ -21,5 +21,5 @@ var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CS
 // //then later, control the whole thing...
 // tl.play();
 
-var element = $('#hi');
-TweenLite.to(hi, 1, {opacity: .25, scale: 3});
+// var element = $('#hi');
+// TweenLite.to(hi, 1, {opacity: .25, scale: 3});

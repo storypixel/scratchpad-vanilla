@@ -23,3 +23,9 @@ var CSSPlugin = require('../../bower_components/gsap/src/uncompressed/plugins/CS
 
 var element = $('#hi');
 TweenLite.to(hi, 1, {opacity: .25, scale: 3});
+
+class GoatCheese {
+  what () {
+    return false;
+  }
+}

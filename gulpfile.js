@@ -26,12 +26,34 @@ function getBundler() {
   if (!bundler) {
     bundler = watchify(browserify(config.entryFile, _.extend({ debug: true }, watchify.args)));
   }
-  return bundler;
+  return bundler
 };
+
+    //   return bundler
+    //     .transform(babelify, {presets: ["es2016"]})
+    //     .bundle()
+    //     // Report compile errors
+    //     .on('error', handleErrors)
+    //     // Use vinyl-source-stream to make the
+    //     // stream gulp compatible. Specifiy the
+    //     // desired output filename here.
+    //     .pipe(source(bundleConfig.outputName))
+    //     // Make that shit ug e.g. minified
+    //     // .pipe(streamify(uglify()))
+    //     // Specify the output destination
+    //     .pipe(gulp.dest(bundleConfig.dest))
+    //     .on('end', reportFinished);
+    // };
+    //
+    // if(global.isWatching) {
+    //   // Wrap with watchify and rebundle on changes
+    //   bundler = watchify(bundler).transform(babelify, {presets: ["es2015"]});
+
 
 function bundle() {
   return getBundler()
     .transform(babelify)
+    .transform(babelify, {presets: ["es2016"]})
     .bundle()
     .on('error', function(err) { console.log('Error: ' + err.message); })
     .pipe(source(config.outputFile ))

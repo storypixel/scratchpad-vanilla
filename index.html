@@ -8,7 +8,19 @@
     <link media="all" href="./build/stylesheets/style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <h1 id="hi">hello world!</h1>
+<figure class="img-widget" id="test">
+  <div data-ui="handle" class="handle"></div>
+  <div  data-ui="placeholder" class="img img-placeholder">
+    <img src="build/images/product-slide-reveal-01.png" class="some-image"/>
+  </div>
+  <div data-ui="1" class="img img-to">
+    <img src="build/images/product-slide-reveal-01.png" class="some-image"/>
+  </div>
+  <div data-ui="2" class="img img-from">
+    <img src="build/images/product-slide-reveal-02.png" class="some-image"/>
+  </div>
+</figure>
+<div id="log"></div>
     <script src="./bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
     <script src="./build/javascript/build.js" type="text/javascript"></script>
   </body>

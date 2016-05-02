@@ -3,8 +3,64 @@
 // @import "base/reset";
 
 // Your styles
-#hi {
-  top: 25%;
-  left: 25%;
-  position: absolute;
+.img-widget {
+  background: pink;
+  position: relative;
+  margin: 20% auto;
+  max-width: 750px;
+  line-height: 0;
 }
+
+.img {
+  pointer-events: none;
+}
+
+.img-placeholder {
+  position: relative;
+  visibility: hidden;
+  .some-image {
+    max-width: 100%;
+  }
+}
+
+.img-to,
+.img-from {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: .3;
+
+
+  .some-image {
+    min-width: 100%;
+    // really the min-width should be whatever the 100% is
+    // dictated by placeholder
+  }
+}
+
+
+.handle {
+  pointer-events: none;
+  background: purple;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  height: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.img-from {
+  background: blue;
+}
+
+.img-to {
+  background: red;
+}
+
+

@@ -92,6 +92,7 @@ gulp.task('html', function() {
 gulp.task('styles', function () {
   return gulp.src('./src/scss/style.scss')
   .pipe(sass({includePaths: ['scss']})) // compile sass
+  .pipe(autoprefixer())
   .pipe(gulp.dest(config.outputDir + "stylesheets")) // write to css dir
   .pipe(reload({stream:true})); // inject into browsers
 });

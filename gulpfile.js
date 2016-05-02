@@ -6,6 +6,7 @@ var babelify = require('babelify');
 var rimraf = require('rimraf');
 var source = require('vinyl-source-stream');
 var _ = require('lodash');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var sass        = require('gulp-sass');

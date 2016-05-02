@@ -3,32 +3,32 @@
 // @import "base/reset";
 
 // Your styles
-.img-widget {
-  // background: pink;
+
+[data-ui-role="container"] {
   position: relative;
-  margin: 20% auto;
-  max-width: 750px;
   line-height: 0;
   user-select: none;
 }
 
-.img {
+[data-ui-role="handle"],
+[data-ui-role="from"],
+[data-ui-role="to"] {
   pointer-events: none;
   user-select: none;
 }
 
-.img-fallback {
+[data-ui-role="fallback"] {
   position: relative;
   visibility: hidden;
 
-  .some-image {
+  img {
     max-width: 100%;
     user-select: none;
   }
 }
 
-.img-to,
-.img-from {
+[data-ui-role="from"],
+[data-ui-role="to"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -37,34 +37,38 @@
   overflow: hidden;
   // opacity: .3;
 
-
-  .some-image {
+  img {
     min-width: 100%;
     // really the min-width should be whatever the 100% is
     // dictated by placeholder
   }
 }
 
-
-.handle {
-  pointer-events: none;
-  background: purple;
+[data-ui-role="handle"]  {
   bottom: 0;
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 5px;
-  height: 100%;
   left: 0;
   z-index: 100;
+
+  img {
+    max-height: 100%;
+  }
 }
 
-.img-from {
-  // background: blue;
+.handle {
+  // background-image: url('build/images/product-slide-line.png');
+
+  transform: translateX(-50%);
+  // width: 5px;
+  // height: 100%;
 }
 
-.img-to {
-  // background: red;
-}
 
+.img-widget {
+  // background: pink;
+  margin: 20% auto;
+  max-width: 750px;
+}
 

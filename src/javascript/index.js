@@ -10,11 +10,11 @@ class MasSliderReveal {
     console.log(this.$el.length);
     this.clicking = false;
     // the thing which the user tries to grab
-    this.$handle = this.$el.find('[data-ui="handle"]');
+    this.$handle = this.$el.find('[data-ui-role="handle"]');
     // the 'left' element
-    this.$el1 = this.$el.find('[data-ui="1"]');
+    this.$el1 = this.$el.find('[data-ui-role="to"]');
     // the 'right' element
-    this.$el2 = this.$el.find('[data-ui="2"]');
+    this.$el2 = this.$el.find('[data-ui-role="from"]');
     // console.log('this.$el2')
   }
 

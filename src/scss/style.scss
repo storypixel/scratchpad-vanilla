@@ -4,22 +4,26 @@
 
 // Your styles
 .img-widget {
-  background: pink;
+  // background: pink;
   position: relative;
   margin: 20% auto;
   max-width: 750px;
   line-height: 0;
+  user-select: none;
 }
 
 .img {
   pointer-events: none;
+  user-select: none;
 }
 
-.img-placeholder {
+.img-fallback {
   position: relative;
   visibility: hidden;
+
   .some-image {
     max-width: 100%;
+    user-select: none;
   }
 }
 
@@ -31,7 +35,7 @@
   left: 0;
   bottom: 0;
   overflow: hidden;
-  opacity: .3;
+  // opacity: .3;
 
 
   .some-image {
@@ -56,11 +60,11 @@
 }
 
 .img-from {
-  background: blue;
+  // background: blue;
 }
 
 .img-to {
-  background: red;
+  // background: red;
 }
 
 
